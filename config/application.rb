@@ -19,5 +19,12 @@ module Blog
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.api_only = true
+
+    config.session_store :cookie_store, key: '_your_app_session'
+
+    # Ensure that middleware for sessions is added
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, config.session_options
   end
 end

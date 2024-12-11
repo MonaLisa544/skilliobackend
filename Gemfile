@@ -12,7 +12,24 @@ gem 'puma', '~> 6.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+#sass
 gem 'sass-rails', '>= 6'
+
+#middleware
+gem "rack-cors"
+
+#device
+gem 'devise'
+
+#jwt
+gem 'devise-jwt'
+
+#role permition 
+gem 'cancancan', '~> 3.0'
+
+
+#seriliazer format json
+gem "fast_jsonapi"
 
 group :development do
   gem 'listen', '~> 3.3' # or the latest version available
