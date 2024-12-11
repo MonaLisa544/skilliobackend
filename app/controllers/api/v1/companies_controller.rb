@@ -5,6 +5,7 @@ class Api::V1::CompaniesController < ApplicationController
       render json: CompanySerializer.new(@companies).serialized_json, status: :ok
     end
   
+    print('wefwefwef')
     # GET /api/v1/companies/:id
     def show
       @company = Company.find(params[:id])
